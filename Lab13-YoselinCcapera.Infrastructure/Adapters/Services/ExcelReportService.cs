@@ -1,14 +1,16 @@
 ﻿using ClosedXML.Excel;
-using Lab13_YoselinCcapera.Application.Services;
-using Lab13_YoselinCcapera.Domain.Dtos;
+using Lab13_YoselinCcapera.Application.UseCases.Reports.Query;
+using MediatR;
+using IExcelReportService = Lab13_YoselinCcapera.Domain.Ports.Service.IExcelReportService;
 
 namespace Lab13_YoselinCcapera.IInfrastructure.Adapters.Services;
 
-
-public class ExcelReportService : IExcelReportService
+public class ExcelReportService(IMediator mediator) : IExcelReportService
 {
-    public byte[] GenerateClientSalesReport(List<ClientSalesReportDto> data)
+    public async Task<byte[]> GenerateClientSalesReportAsync()
     {
+        var data = await mediator.Send(new GetClientSalesReportQuery());
+
         using var workbook = new XLWorkbook();
         var worksheet = workbook.Worksheets.Add("Ventas por cliente");
 
@@ -36,8 +38,10 @@ public class ExcelReportService : IExcelReportService
         return ToBytes(workbook);
     }
 
-    public byte[] GenerateProductSalesReport(List<ProductSalesReportDto> data)
+    public async Task<byte[]> GenerateProductSalesReportAsync()
     {
+        var data = await mediator.Send(new GetProductSalesReportQuery());
+
         using var workbook = new XLWorkbook();
         var worksheet = workbook.Worksheets.Add("Ventas por producto");
 

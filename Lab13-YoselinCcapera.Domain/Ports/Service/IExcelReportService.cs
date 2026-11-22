@@ -2,5 +2,6 @@
 
 public interface IExcelReportService
 {
-    
+    Task<byte[]> GenerateClientSalesReportAsync();
+    Task<byte[]> GenerateProductSalesReportAsync();
 }

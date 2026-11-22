@@ -1,19 +1,18 @@
 ﻿using Lab13_YoselinCcapera.Application.Services;
+using Lab13_YoselinCcapera.Domain.Dtos;
 using Lab13_YoselinCcapera.Domain.Ports.Repositories;
 using MediatR;
 
 namespace Lab13_YoselinCcapera.Application.UseCases.Reports.Query;
 
-public class GetClientSalesReportQuery : IRequest<byte[]>
+public class GetClientSalesReportQuery : IRequest<List<ClientSalesReportDto>>
 {
 }
 
-internal sealed class GetClientSalesReportQueryHandler(IUnityOfWork unitOfWork, IExcelReportService excelReportService) : IRequestHandler<GetClientSalesReportQuery, byte[]>
+internal sealed class GetClientSalesReportQueryHandler(IUnityOfWork unitOfWork) : IRequestHandler<GetClientSalesReportQuery, List<ClientSalesReportDto>>
 {
-    public async Task<byte[]> Handle(GetClientSalesReportQuery request, CancellationToken cancellationToken)
+    public async Task<List<ClientSalesReportDto>> Handle(GetClientSalesReportQuery request, CancellationToken cancellationToken)
     {
-        var data = await unitOfWork.Reports.GetClientSalesAsync();
-
-        return excelReportService.GenerateClientSalesReport(data);
+        return await unitOfWork.Reports.GetClientSalesAsync();
     }
 }
