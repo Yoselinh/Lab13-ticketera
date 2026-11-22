@@ -1,0 +1,6 @@
+@Lab13_YoselinCcapera_HostAddress = http://localhost:5052
+
+GET {{Lab13_YoselinCcapera_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

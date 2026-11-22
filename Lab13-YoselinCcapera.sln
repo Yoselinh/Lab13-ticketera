@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab13-YoselinCcapera", "Lab13-YoselinCcapera\Lab13-YoselinCcapera.csproj", "{F81050AF-3129-4895-BB97-0C39A901D4A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab13-YoselinCcapera.Domain", "Lab13-YoselinCcapera.Domain\Lab13-YoselinCcapera.Domain.csproj", "{561BA3CE-2930-45A2-A656-C119CA64FF66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab13-YoselinCcapera.Infrastructure", "Lab13-YoselinCcapera.Infrastructure\Lab13-YoselinCcapera.Infrastructure.csproj", "{5F9666E0-359A-4C52-B0BF-0B4FC37FBDEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab13-YoselinCcapera.Application", "Lab13-YoselinCcapera.Application\Lab13-YoselinCcapera.Application.csproj", "{73B1B960-A02B-4625-8935-2ECFB4D0D242}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F81050AF-3129-4895-BB97-0C39A901D4A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F81050AF-3129-4895-BB97-0C39A901D4A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F81050AF-3129-4895-BB97-0C39A901D4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F81050AF-3129-4895-BB97-0C39A901D4A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{561BA3CE-2930-45A2-A656-C119CA64FF66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{561BA3CE-2930-45A2-A656-C119CA64FF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{561BA3CE-2930-45A2-A656-C119CA64FF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{561BA3CE-2930-45A2-A656-C119CA64FF66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F9666E0-359A-4C52-B0BF-0B4FC37FBDEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F9666E0-359A-4C52-B0BF-0B4FC37FBDEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F9666E0-359A-4C52-B0BF-0B4FC37FBDEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F9666E0-359A-4C52-B0BF-0B4FC37FBDEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B1B960-A02B-4625-8935-2ECFB4D0D242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B1B960-A02B-4625-8935-2ECFB4D0D242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B1B960-A02B-4625-8935-2ECFB4D0D242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B1B960-A02B-4625-8935-2ECFB4D0D242}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
